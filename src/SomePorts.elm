@@ -9,11 +9,6 @@ port teamsOut : () -> Cmd msg
 port teamsIn : (Value -> msg) -> Sub msg
 
 
-type TeamsInBound
-    = GotString String
-    | PortFailure ()
-
-
 teamsInbound _ =
     teamsIn <|
         \value -> Debug.log "teamsIn" <| Decode.decodeValue Decode.string value
