@@ -3,11 +3,6 @@ module Router exposing (..)
 import SomePorts
 import Url exposing (Url)
 import Url.Parser as Parser exposing (..)
-import Url.Parser.Query as Q
-
-
-type alias Model =
-    { routeState : RouteState }
 
 
 type Route
