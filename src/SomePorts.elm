@@ -16,4 +16,4 @@ type TeamsInBound
 
 teamsInbound _ =
     teamsIn <|
-        \value -> Decode.decodeValue Decode.string value
+        \value -> Debug.log "teamsIn" <| Decode.decodeValue Decode.string value

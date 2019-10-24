@@ -98,7 +98,7 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions { routeState } =
-    case Debug.log "routeState" routeState of
+    case routeState of
         Router.Teams ->
             SomePorts.teamsInbound ()
                 |> Sub.map MessageFromJs
